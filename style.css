@@ -1,0 +1,423 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #011826;
+
+    
+}
+
+::-webkit-scrollbar {
+    display: none; /* Webkit tabanlı tarayıcılarda (Chrome, Safari) kaydırma çubuğunu gizler */
+}
+
+
+
+/* NavBar */
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #133948;
+    backdrop-filter: blur(7px);
+    z-index: -3;
+}
+
+.logo {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.Navbar a {
+    position: relative;
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 2.5rem;
+}
+
+.Navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    border: 10px;
+    border-radius: 7px;
+    background: #04BFAD;
+    transition: .3s;
+}
+
+.Navbar a:hover::before{
+    width: 100%;
+}
+
+#check {
+    display: none;
+}
+
+/* Telefon, tablet, vb. için navbar */
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #F2F2E4;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Telefon, tablet, vb. için navbar */
+/* Navbar */
+/* NavBar */
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    color: #F2F2E4;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+
+}
+
+
+
+.home .iconlar i{
+    width: 50px;
+    font-size: 40px;
+    margin-top: 30px;
+
+}
+
+.home-yazı{
+    max-width: 60rem;
+    position: relative;
+    animation: açıga-çıkma-yazı 2s linear infinite;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes açıga-çıkma-yazı {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.home .img-sar{
+    position: absolute;
+    top: 200px;
+    bottom: -10px;
+    right: 0;
+    left: 600px;
+
+}
+
+.home .img-sar img{
+    width: 930px;
+    z-index: -2;
+}
+
+.home .img-ger{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 1025px;
+    display: flex;
+    align-items: center;
+    animation: açıga-çıkma 2s linear infinite;
+    animation-iteration-count: 1;
+}
+
+@keyframes açıga-çıkma {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.home .img-ger img{
+ height: 600px;
+ width: 600px;
+}
+
+.home-yazı h2 {
+    font-size: 4.4rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.home-yazı .yazı-animasyon{
+    position: relative;
+    width: 33rem;
+}
+
+.home-yazı .yazı-animasyon h3{
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #91F2F2;
+}
+
+.home-yazı p{
+    font-size: 1.6;
+    margin: 2rem 0 4rem;
+}
+
+.btn-box {
+  position: relative;
+  width: 34.5rem;
+  height: 4rem;
+  margin-top: 30px;
+}
+
+.btn + .btn{
+    margin: 20px;
+}
+
+
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10rem;
+    height: 90%;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F2F2E4;
+    letter-spacing: .1rem;
+    background: #04BFAD;
+    border: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    
+    
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #1B4F64;
+    color: #102601;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before{
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #01131f;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 500px; 
+}
+
+.about-img img {
+    width: 20vw;
+    border-radius: 75px;
+}
+
+.heading{
+    text-align: left;
+    font-size: 4.5rem;
+}
+
+.heading span{
+    color: #80D5D5;
+}
+.about-content h4{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+* {box-sizing:border-box}
+
+
+.container{
+  height: 15px;
+  width: 50%; 
+  background-color: #80D5D5; 
+  border: 20px;
+  border-radius: 15px;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 15px; 
+  padding-bottom: 10px; 
+  color: rgb(255, 255, 255); 
+}
+
+
+
+
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+
+    .home .img-sar img{
+        display: none;
+      }
+      
+      .home .img-ger{
+          display: none;
+      }
+  
+      .about-img img{
+          display: none;
+      }
+      
+
+
+}
+
+@media (max-width: 710px) {
+    .sayfa{
+        margin-top: 80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .icons {
+        display: block;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .Navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #1B4F64;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.Navbar {
+        height: 17.7rem;
+    }
+
+    .Navbar a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        text-align: start;
+        margin-left: 50px;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.Navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s);
+    }
+
+        .Navbar a::before{
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 0;
+        height: 0px;
+        border: 0px;
+        border-radius: 0px;
+        background: #011826;
+        transition: .0s;
+    }
+
+    .home .img-sar img{
+      display: none;
+    }
+    
+    .home .img-ger{
+        display: none;
+    }
+
+    .about-img img{
+        float: top;
+    }
+    
+
+
+    body{
+        background-color: #011826;
+        background-size: 100%;
+    
+        
+    }
+
+    
+
+}
+
+
+
